@@ -388,3 +388,78 @@ Que sale: la pagina que usted definio en el `index.html`.
 | Comando | Para que sirve |
 |---|---|
 | `docker system prune` | Eliminar todo lo que no esta en uso |
+
+
+# Evidencias: Taller Práctico de Docker
+
+Este documento contiene las evidencias de ejecución de los pasos detallados en el taller práctico de Docker.
+
+---
+
+## Parte 1 y 2 - Verificación y Primer contenedor
+
+**Comandos ejecutados:**
+```bash
+docker --version
+docker compose version
+docker run hello-world
+```
+
+### Evidencia 1
+*(pega aquí tu captura)*
+
+---
+
+## Parte 4 - Ver contenedores
+
+**Comandos ejecutados:**
+```bash
+docker ps
+docker ps -a
+```
+
+### Evidencia 2
+*(pega aquí tu captura)*
+
+---
+
+## Parte 5, 6 y 7 - Servidor web Nginx y Ciclo de vida
+
+### Evidencia 3
+*(pega aquí tu captura)*
+
+---
+
+## Parte 8 - Múltiples contenedores
+
+### Evidencia 4
+*(pega aquí tu captura)*
+
+---
+
+## Parte 10 - Persistencia con volúmenes en MariaDB
+
+**Comando ejecutado:**
+```bash
+docker run -d --name mi-db -e MYSQL_ROOT_PASSWORD=secret123 -e MYSQL_DATABASE=taller -v datos-mariadb:/var/lib/mysql -p 3306:3306 mariadb:11
+```
+
+### Evidencia 5
+*(pega aquí tu captura)*
+
+---
+
+## Parte 11 - Construir su propia imagen
+
+**Comandos ejecutados:**
+```bash
+docker build -t mi-imagen:v1 .
+docker run -d --name mi-contenedor -p 9090:80 mi-imagen:v1
+```
+
+### Evidencia 6
+*(pega aquí tu captura)*
+
+### Evidencia 7
+*(pega aquí tu captura)*
+
